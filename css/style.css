@@ -31,7 +31,6 @@ body {
                 url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Hanging_Gardens_of_Babylon.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
     padding: 200px 0;
     background-attachment: fixed;
     position: relative;
@@ -46,6 +45,14 @@ body {
     font-weight: 700;
     letter-spacing: 4px;
     animation: fadeInDown 1s ease-out;
+    color: #FFA500; /* Orange */
+}
+
+.hero p {
+    color: #000000; /* Black */
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
 }
 
 @keyframes fadeInDown {

@@ -1,0 +1,423 @@
+:root {
+    --primary-color: #C5A572;
+    --secondary-color: #1B3C59;
+    --accent-color: #DAA520;
+    --text-color: #2C1810;
+    --light-color: #F5E6D3;
+    --background-color: #F0E6D2;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.navbar {
+    background-color: var(--secondary-color);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--light-color) !important;
+}
+
+.nav-link {
+    color: var(--light-color) !important;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url('https://upload.wikimedia.org/wikipedia/commons/a/ae/Hanging_Gardens_of_Babylon.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 200px 0;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 4px;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero p {
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+/* Media Section */
+.embed-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Cart notification */
+.cart-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product details page */
+.product-details {
+    padding: 20px;
+}
+
+.product-details .price {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+.product-details .description {
+    margin: 20px 0;
+}
+
+.product-details ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.product-details .btn-primary {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+/* Cart page styles */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cart-summary {
+    margin-top: 30px;
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 1rem;
+    width: 100%;
+}
+
+.product-item {
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item > div {
+    height: 100%;
+}
+
+/* Collection Styles */
+#collection-component-1739510437728 {
+    margin-bottom: 2rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .featured-products .col-md-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Product Cards */
+.shopify-buy__product {
+    margin-bottom: 1.5rem !important;
+    background: white !important;
+    border-radius: 8px !important;
+    padding: 1rem !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Product Images */
+.shopify-buy__product__variant-img {
+    border-radius: 4px !important;
+    margin-bottom: 1rem !important;
+    max-height: 300px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
+/* Product Titles */
+.shopify-buy__product__title {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    text-align: center !important;
+    margin: 0.5rem 0 !important;
+}
+
+/* Product Prices */
+.shopify-buy__product__price {
+    font-size: 1.2rem !important;
+    color: #666 !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0.5rem 0 !important;
+}
+
+/* Quantity Controls */
+.shopify-buy__quantity-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 1rem 0 !important;
+    gap: 0.5rem !important;
+}
+
+.shopify-buy__quantity {
+    width: 60px !important;
+    text-align: center !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 0.5rem !important;
+}
+
+.shopify-buy__btn--parent {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Add to Cart Buttons */
+.shopify-buy__btn {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    transition: background-color 0.3s ease !important;
+    cursor: pointer !important;
+    text-transform: none !important;
+}
+
+.shopify-buy__btn:hover {
+    background-color: #218838 !important;
+}
+
+/* Out of Stock State */
+.shopify-buy__product__variant-selectors {
+    text-align: center !important;
+    margin: 1rem 0 !important;
+}
+
+/* Quantity Buttons */
+.shopify-buy__quantity-increment,
+.shopify-buy__quantity-decrement {
+    padding: 0.25rem 0.5rem !important;
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 25px !important;
+}
+
+.shopify-buy__quantity-increment::after {
+    content: '+' !important;
+}
+
+.shopify-buy__quantity-decrement::after {
+    content: '-' !important;
+}
+
+/* Hide the original text content */
+.shopify-buy__quantity-increment span,
+.shopify-buy__quantity-decrement span {
+    display: none !important;
+}
+
+/* Modal Styles */
+.shopify-buy__modal {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shopify-buy__modal-product-img {
+    border-radius: 4px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .quantity-controls {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+}
+
+/* Featured Products Section with Babylon Background */
+#shop.shop-section {
+    position: relative;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/babylon-celebration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 600px;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+.featured-products {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.featured-products h2 {
+    color: white;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.featured-products .product-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.featured-products .product-item:hover {
+    transform: translateY(-5px);
+}
